@@ -62,4 +62,16 @@ public class Candidate {
     @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL)
     private List<Courses> courses;
 
+    // Опыт работы
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL)
+    private List<WorkExperience> workExperiences;
+
+    // Рецензии
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL)
+    private List<Reference> reference;
+
+    // Ближайшие родственники
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL)
+    private List<FamilyMember> familyMember;
+
 }
