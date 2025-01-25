@@ -1,0 +1,9 @@
+com\project\job_application_form\JobApplicationFormApplication.class
+com\project\job_application_form\Document.class
+com\project\job_application_form\Address.class
+com\project\job_application_form\repository\CandidateRepository.class
+com\project\job_application_form\Contacts.class
+com\project\job_application_form\RelativesContacts.class
+com\project\job_application_form\Courses.class
+com\project\job_application_form\Education.class
+com\project\job_application_form\Candidate.class
