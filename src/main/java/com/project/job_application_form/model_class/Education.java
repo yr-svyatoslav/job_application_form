@@ -1,6 +1,8 @@
 package com.project.job_application_form.model_class;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 // импортируем классы и аннотации (@Entity, @Id, @GeneratedValue, @ManyToOne)
 
@@ -22,32 +24,22 @@ public class Education {
     @GeneratedValue (strategy = GenerationType.IDENTITY) // генерация ID автоматически по стратегии=инкремент+1
     @JsonIgnore
     private Long id;
-
+    @JsonProperty("Дата начала")
     private String educationStartYear;
+    @JsonProperty("Дата окончания")
     private String educationEndYear;
+    @JsonProperty("Наименование")
     private String educationInstitutionName;
+    @JsonProperty("Специальность")
     private String educationSpecialization;
+    @JsonProperty("Форма обучения")
     private String educationFormEducation;
+    @JsonProperty("Квалификация")
     private String educationQualification;
 
-    // Форматирование вывода данных
-    public String getEducation () {
-        return String.format("%s-%s, %s, %s, %s, %s",
-                formatField(educationStartYear),
-                formatField(educationEndYear),
-                formatField(educationInstitutionName),
-                formatField(educationSpecialization),
-                formatField(educationFormEducation),
-                formatField(educationQualification));
-    }
-
-    private String formatField(String field) {
-        return field != null ? field : "не указано";
-    }
-
     // связь "многие к одному" для связи с основным разделом Candidate
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.EAGER)
     @JoinColumn(name = "candidate_id")
-    @JsonIgnore
+    @JsonBackReference
     private Candidate candidate;
 }

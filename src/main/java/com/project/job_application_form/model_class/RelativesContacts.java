@@ -1,5 +1,6 @@
 package com.project.job_application_form.model_class;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Table;
 
@@ -18,8 +19,11 @@ import lombok.*;
                     + необходимо для корректной работы Hibernate,
                     который часто требует наличие конструктора без параметров*/
 public class RelativesContacts {
+    @JsonProperty("Номер")
     private String numberRelativ;
+    @JsonProperty("ФИО")
     private String fullNameRelativ;
+    @JsonProperty("Степень родства")
     private String relationship;
 
 }

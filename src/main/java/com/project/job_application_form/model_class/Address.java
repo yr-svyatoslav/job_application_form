@@ -1,5 +1,8 @@
 package com.project.job_application_form.model_class;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 /* аннотации Lombok для сокращения части кода
 (создание гетеров, сетеров и конструкторов со всеми параметрами) */
@@ -26,21 +29,30 @@ import org.springframework.beans.BeanUtils; // метод для копиров�
 public class Address {
     @Id // первичный ключ (primary key)
     @GeneratedValue (strategy = GenerationType.IDENTITY) // генерация ID автоматически по стратегии=инкремент+1
+    @JsonIgnore
     private Long id;
-
+    @JsonProperty("Город")
     private String city;
+    @JsonProperty("Область")
     private String area;
+    @JsonProperty("Район")
     private String district;
+    @JsonProperty("Улица")
     private String street;
+    @JsonProperty("Дом")
     private String house;
+    @JsonProperty("Корпус")
     private String block;
+    @JsonProperty("Квартира")
     private String flat;
 
+    @JsonProperty("Тип адреса")
     private String addressType; // Тип адреса: "PERMANENT" (постоянный) или "ACTUAL" (фактический)
 
     // связь "многие к одному" для связи с основным разделом Candidate
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.EAGER)
     @JoinColumn(name = "candidate_id")
+    @JsonBackReference
     private Candidate candidate;
 
     // Метод для копирования данных из постоянного адреса в фактический
@@ -49,15 +61,15 @@ public class Address {
         Map<String, Address> addressMap = addresses.stream()
                 .collect(Collectors.toMap(Address::getAddressType, address -> address));
 
-        Address permanentAddress = addressMap.get("PERMANENT");
-        Address actualAddress = addressMap.get("ACTUAL");
+        Address permanentAddress = addressMap.get("РЕГИСТРАЦИЯ");
+        Address actualAddress = addressMap.get("ФАКТИЧЕСКИЙ");
 
 
         // если есть постоянный, но нет фактического, то создаём его и добавляем в список
             if (permanentAddress!=null) {
                 if (actualAddress==null) {
                     actualAddress = new Address();
-                    actualAddress.setAddressType("ACTUAL");
+                    actualAddress.setAddressType("ФАКТИЧЕСКИЙ");
                     addresses.add(actualAddress);
                 }
                 // копируем все параметры из постоянного в фактический

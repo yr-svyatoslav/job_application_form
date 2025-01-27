@@ -1,6 +1,8 @@
 package com.project.job_application_form.model_class;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 // импортируем классы и аннотации (@Entity, @Id, @GeneratedValue, @OneToMany, @Embedded)
 
@@ -23,44 +25,67 @@ import java.util.List;
 public class Candidate {
 
     @Id // первичный ключ (primary key)
-    @GeneratedValue (strategy = GenerationType.IDENTITY) // генерация ID автоматически по стратегии=инкремент+1
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // генерация ID автоматически по стратегии=инкремент+1
     @JsonIgnore
     private Long id;
 
     private String iin;
     private String fullName;
-    private String previousSurname;
     private LocalDate birthDate;
     private String birthPlace;
     private String nationality;
     private String citizenship;
 
-//    // Добавляем (принимаем) объект из класса Document
-//    @Embedded
-//    private Document document;
+    // Добавляем (принимаем) объект из класса Document
+    @Embedded
+    private Document document;
 
     // Контакты
-    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
     private List<Contacts> contacts;
 
-//    // Местожительство
-//    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL)
-//    private List<Address> addresses;
-//
-//    private boolean isSameAsPermanentAddress; // Галочка "совпадает с адресом постоянной регистрации"
-//
-//    public void copyPermanentAddressToActual () {
-//        if (isSameAsPermanentAddress) {
-//            Address.copyPermanentAddressToActual(addresses);
-//        }
-//    }
+    // Местожительство
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<Address> addresses;
 
-//    // Образование
-//    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL)
-//    private List<Education> educations;
+    private boolean isSameAsPermanentAddress; // Галочка "совпадает с адресом постоянной регистрации"
 
-//    // Курсы
-//    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL)
-//    private List<Courses> courses;
+    public void copyPermanentAddressToActual () {
+        if (isSameAsPermanentAddress) {
+            Address.copyPermanentAddressToActual(addresses);
+        }
+    }
+
+    // Образование
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<Education> educations;
+
+    // Курсы
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<Courses> courses;
+
+    //Места работы
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<WorkExperience> workExperiences;
+
+    //Рекомендации
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<Recommendation> recommendations;
+
+    //Семейное положение
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<FamilyStatus> familyStatuses;
+
+    //Дополнительная информация
+    @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<AdditionalInfo> additionalInfos;
 
 }

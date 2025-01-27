@@ -4,22 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5edc7ec9-6091-4ff9-baa4-179ee635bf29" name="Changes" comment="Classes added: Candidate(+Document), Contacts(+RelativesContacts), Address, Education and Courses. To the file &quot;pom.xml &quot; added dependency for Lombok">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/CandidateApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/controller/CandidateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/repository/AddressRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/repository/CandidateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/repository/ContactsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/repository/CoursesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/repository/EducationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/job_application_form/Address.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/job_application_form/Candidate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/job_application_form/Contacts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/job_application_form/Courses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/job_application_form/Document.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/job_application_form/Education.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/job_application_form/RelativesContacts.java" beforeDir="false" />
+    <list default="true" id="5edc7ec9-6091-4ff9-baa4-179ee635bf29" name="Changes" comment="Созданы классы, репозитории, контроллер, основной класс запускающий приложение">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/AdditionalInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/FamilyStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Recommendation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/WorkExperience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/JobApplicationFormApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/controller/CandidateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/controller/CandidateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Candidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Contacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Contacts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Courses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/RelativesContacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/RelativesContacts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/JobApplicationFormApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/controller/CandidateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/controller/CandidateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Candidate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Candidate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Contacts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Contacts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Courses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Courses.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Document.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Education.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Education.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/RelativesContacts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/RelativesContacts.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +91,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -189,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737396794482</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Созданы классы, репозитории, контроллер, основной класс запускающий приложение">
+      <option name="closed" value="true" />
+      <created>1737827484336</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737827484336</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,6 +238,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Classes added: Candidate(+Document), Contacts(+RelativesContacts), Address, Education and Courses. To the file &quot;pom.xml &quot; added dependency for Lombok" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classes added: Candidate(+Document), Contacts(+RelativesContacts), Address, Education and Courses. To the file &quot;pom.xml &quot; added dependency for Lombok" />
+    <MESSAGE value="Созданы классы, репозитории, контроллер, основной класс запускающий приложение" />
+    <option name="LAST_COMMIT_MESSAGE" value="Созданы классы, репозитории, контроллер, основной класс запускающий приложение" />
   </component>
 </project>

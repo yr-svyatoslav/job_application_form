@@ -1,5 +1,6 @@
 package com.project.job_application_form.model_class;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Table;
 
@@ -20,20 +21,12 @@ import java.time.LocalDate; // хранит дату без времени и ч
                     + необходимо для корректной работы Hibernate,
                     который часто требует наличие конструктора без параметров*/
 public class Document {
+    @JsonProperty("Наименование")
     private String documentName;
+    @JsonProperty("Номер")
     private String documentNumber;
-    private String issuedBy;  // Кем выдан
-    private LocalDate issuedDate;  // Когда выдан
-
-/*//возможно нужен toString для вывода данных объекта:
-    @Override
-    public String toString() {
-        return "Document{" +
-                "documentName='" + documentName + '\'' +
-                ", documentNumber='" + documentNumber + '\'' +
-                ", issuedBy='" + issuedBy + '\'' +
-                ", issuedDate=" + issuedDate +
-                '}';
-    }*/
-
+    @JsonProperty("Кем выдан")
+    private String issuedBy;
+    @JsonProperty("Когда выдан")
+    private LocalDate issuedDate;
 }

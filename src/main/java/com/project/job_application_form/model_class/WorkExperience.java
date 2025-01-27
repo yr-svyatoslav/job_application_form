@@ -19,26 +19,31 @@ import lombok.*;
                     если нужно создать сущность без параметров +
                     + необходимо для корректной работы Hibernate,
                     который часто требует наличие конструктора без параметров*/
-public class Courses {
+
+public class WorkExperience {
     @Id // первичный ключ (primary key)
-    @GeneratedValue (strategy = GenerationType.IDENTITY) // генерация ID автоматически по стратегии=инкремент+1
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // генерация ID автоматически по стратегии=инкремент+1
     @JsonIgnore
     private Long id;
+
     @JsonProperty("Дата начала")
-    private String coursesStartYear;
-    @JsonProperty("Срок обучения")
-    private String coursesDuration;
-    @JsonProperty("Наименование")
-    private String coursesName;
-    @JsonProperty("Специальность")
-    private String coursesSpecialization;
-    @JsonProperty("Сертификаты")
-    private String coursesCertificates;
+    private String experienceStartDate;
+    @JsonProperty("Дата окончания")
+    private String experienceEndDate;
+    @JsonProperty("Название организации")
+    private String experienceOrganizationName;
+    @JsonProperty("Наименование должности")
+    private String experiencePosition;
+    @JsonProperty("ФИО руководителя")
+    private String experienceManagerName;
+    @JsonProperty("Телефон руководителя")
+    private String experienceManagerPhone;
+    @JsonProperty("Причина увольнения")
+    private String experienceReasonForLeaving;
 
     // связь "многие к одному" для связи с основным разделом Candidate
     @ManyToOne (fetch = FetchType.EAGER)
     @JoinColumn(name = "candidate_id")
     @JsonBackReference
     private Candidate candidate;
-
 }
