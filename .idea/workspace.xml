@@ -4,30 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5edc7ec9-6091-4ff9-baa4-179ee635bf29" name="Changes" comment="Созданы классы, репозитории, контроллер, основной класс запускающий приложение">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/AdditionalInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/FamilyStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Recommendation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/WorkExperience.java" afterDir="false" />
+    <list default="true" id="5edc7ec9-6091-4ff9-baa4-179ee635bf29" name="Changes" comment="Сделан контейнер, добавлена инструкция">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/JobApplicationFormApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/controller/CandidateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/controller/CandidateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Candidate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Contacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Contacts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Courses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/Education.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/RelativesContacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/job_application_form/model_class/RelativesContacts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/JobApplicationFormApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/controller/CandidateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/controller/CandidateController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Address.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Candidate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Candidate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Contacts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Contacts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Courses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Courses.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Document.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Education.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/Education.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/RelativesContacts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/job_application_form/model_class/RelativesContacts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Dockerfile" />
         <option value="Class" />
       </list>
     </option>
@@ -63,6 +49,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -74,26 +63,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Application.executor": "Run",
-    "Application.CandidateApplication.executor": "Run",
-    "Application.JobApplicationFormApplication.executor": "Run",
-    "JUnit.JobApplicationFormApplicationTests.contextLoads.executor": "Run",
-    "JUnit.JobApplicationFormApplicationTests.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/svyat/IdeaProjects/job-application-form/src/main/java/com/project/job_application_form",
-    "last_opened_file_path": "C:/Users/svyat/IdeaProjects/job-application-form",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CandidateApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JobApplicationFormApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JobApplicationFormApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JobApplicationFormApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.job-application-form [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.job-application-form [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.job-application-form [org.springframework.boot:spring-boot-maven-plugin:3.4.1:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/svyat/IdeaProjects/job-application-form/src/main/java/com/project/job_application_form&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/svyat/IdeaProjects/job-application-form&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.28134558&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.project.job_application_form" />
@@ -170,6 +169,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CandidateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="job-application-form" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.job_application_form.CandidateApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.CandidateApplication" />
@@ -181,6 +188,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Lenovo\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5edc7ec9-6091-4ff9-baa4-179ee635bf29" name="Changes" comment="" />
@@ -188,6 +198,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1737184018813</updated>
+      <workItem from="1737999277000" duration="1528000" />
+      <workItem from="1738090186246" duration="858000" />
+      <workItem from="1738091057525" duration="6294000" />
+      <workItem from="1738268461626" duration="4224000" />
     </task>
     <task id="LOCAL-00001" summary="Classes added: Candidate(+Document), Contacts(+RelativesContacts), Address, Education and Courses. To the file &quot;pom.xml &quot; added dependency for Lombok">
       <option name="closed" value="true" />
@@ -205,8 +219,27 @@
       <option name="project" value="LOCAL" />
       <updated>1737827484336</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Созданы классы, репозитории, контроллер, основной класс запускающий приложение. Добавлен DockerFile для создания и запуска контейнера через docker.">
+      <option name="closed" value="true" />
+      <created>1738095149274</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738095149274</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Созданы классы, репозитории, контроллер, основной класс запускающий приложение. Добавлен DockerFile для создания и запуска контейнера через docker.">
+      <option name="closed" value="true" />
+      <created>1738095186431</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738095186431</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -214,6 +247,12 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="149" />
+                  <entry key="Table.GitHub.CommitStatus.ColumnIdWidth" value="15" />
+                </map>
+              </option>
               <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
                   <entry key="Show.Git.Branches" value="true" />
@@ -239,6 +278,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Classes added: Candidate(+Document), Contacts(+RelativesContacts), Address, Education and Courses. To the file &quot;pom.xml &quot; added dependency for Lombok" />
     <MESSAGE value="Созданы классы, репозитории, контроллер, основной класс запускающий приложение" />
-    <option name="LAST_COMMIT_MESSAGE" value="Созданы классы, репозитории, контроллер, основной класс запускающий приложение" />
+    <MESSAGE value="Созданы классы, репозитории, контроллер, основной класс запускающий приложение. Добавлен DockerFile для создания и запуска контейнера через docker." />
+    <option name="LAST_COMMIT_MESSAGE" value="Созданы классы, репозитории, контроллер, основной класс запускающий приложение. Добавлен DockerFile для создания и запуска контейнера через docker." />
   </component>
 </project>

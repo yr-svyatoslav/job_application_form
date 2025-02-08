@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - 8081:8080  # Проброс порта на хост
+    restart: always  # Перезапускать контейнеры при сбоях
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod  # Пример настройки переменной окружения
+      - H2_DB_URL=jdbc:h2:mem:testdb      # URL для подключения к H2 базе данных
+      - H2_DB_USER=sa  # Пользователь базы данных
+      - H2_DB_PASSWORD=password  # Указываем пароль прямо (без секрета)
+    volumes:
+      - h2-data:/data  # Монтируем том для хранения данных базы данных
+
+# Определение тома для хранения данных H2
+volumes:
+  h2-data:
