@@ -1,8 +1,8 @@
 package com.project.job_application_form.model_class;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 // импортируем классы и аннотации (@Entity, @Id, @GeneratedValue, @OneToMany, @Embedded)
 
@@ -29,27 +29,37 @@ public class Candidate {
     @JsonIgnore
     private Long id;
 
+    @JsonProperty("ИИН")
     private String iin;
+    @JsonProperty("ФИО")
     private String fullName;
+    @JsonProperty("Дата рождения")
     private LocalDate birthDate;
+    @JsonProperty("Место рождения")
     private String birthPlace;
+    @JsonProperty("Национальность")
     private String nationality;
+    @JsonProperty("Гражданство")
     private String citizenship;
 
     // Добавляем (принимаем) объект из класса Document
     @Embedded
+    @JsonProperty("Документ")
     private Document document;
 
     // Контакты
     @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
+    @JsonProperty("Контакты")
     private List<Contacts> contacts;
 
     // Местожительство
     @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
+    @JsonProperty("Адрес")
     private List<Address> addresses;
 
+    @JsonProperty("Фактический адрес совпадает с адресом постоянной регистрации")
     private boolean isSameAsPermanentAddress; // Галочка "совпадает с адресом постоянной регистрации"
 
     public void copyPermanentAddressToActual () {
@@ -61,31 +71,37 @@ public class Candidate {
     // Образование
     @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
+    @JsonProperty("Образование")
     private List<Education> educations;
 
     // Курсы
     @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
+    @JsonProperty("Курсы")
     private List<Courses> courses;
 
     //Места работы
     @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
+    @JsonProperty("Место работы")
     private List<WorkExperience> workExperiences;
 
     //Рекомендации
     @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
+    @JsonProperty("Рекомендации")
     private List<Recommendation> recommendations;
 
     //Семейное положение
     @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
+    @JsonProperty("Семейное положение")
     private List<FamilyStatus> familyStatuses;
 
     //Дополнительная информация
     @OneToMany(mappedBy = "candidate", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonManagedReference
+    @JsonProperty("Дополнительная информация")
     private List<AdditionalInfo> additionalInfos;
 
 }
